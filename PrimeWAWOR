@@ -1,0 +1,40 @@
+//Generate Prime numbers upto n . With Argument Without Return Type
+//
+public class PrimeWAWOR
+{
+	public void check(int N)
+	{
+		for ( int i =2;i<N;i++)
+		{
+			boolean F=false;
+			for(int j=2;j<i;j++)
+			{
+				if (i%j==0)
+				{
+					F=true;	
+				}
+			}
+			if(F==false)
+			System.out.println(i);
+		}
+	}
+	public static void main(String[] args)
+	{
+		PrimeWAWOR obj=new PrimeWAWOR();
+		boolean F=false;
+		int i=0;
+		if (args.length>0)
+		{
+			int N=Integer.parseInt(args[0]);
+			if (N==0||N==1)
+			{
+				System.out.println("No Prime Numbers");
+			}
+			else
+			{	
+				obj.check(N);
+			}
+		}
+	}
+}	
+	
