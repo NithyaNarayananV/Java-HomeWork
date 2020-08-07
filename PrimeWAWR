@@ -1,0 +1,43 @@
+public class PrimeWAWR
+{
+	public int check(int i)
+	{		
+			boolean F=false;
+			for(int j=2;j<i;j++)
+			{
+				if (i%j==0)
+				{
+					F=true;	
+				}
+			}
+			if(F==false)
+				return i;
+			else 
+				return 0;
+	}
+	public static void main(String[] args)
+	{
+		PrimeWAWR obj=new PrimeWAWR();
+		boolean F=false;
+		int i=0;
+		int x;
+		if (args.length>0)
+		{
+			int N=Integer.parseInt(args[0]);
+			if (N==0||N==1)
+			{
+				System.out.println("No Prime Numbers");
+			}
+			else
+			{	
+				for (  i =2;i<N;i++)
+				{
+					x=obj.check(i);
+					if (x!=0)
+						System.out.println(x);
+				}
+			}	
+		}
+	}
+}	
+	
