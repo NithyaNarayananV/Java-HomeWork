@@ -1,0 +1,36 @@
+public class Prime
+{
+	public static void main(String[] args)
+	{
+		boolean F=false;
+		int i=0;
+		if (args.length>0)
+		{
+			int N=Integer.parseInt(args[0]);
+			if (N==0||N==1)
+			{
+				System.out.println("No Prime Numbers");
+			}
+			else
+			{
+				for ( i =2;i<N;i++)
+				{
+					F=false;
+					for(int j=2;j<i;j++)
+					{
+						if (i%j==0)
+						{
+							F=true;			
+						}						
+					}
+					if(F==false)
+					System.out.println(i);
+				}
+			}
+		
+		}
+	}
+}	
+	
+
+
